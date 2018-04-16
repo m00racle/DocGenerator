@@ -11,6 +11,6 @@ public class Main {
     public static void main(String[] args) {
 	// get class object (at the moment Class called MathUtil is not yet available
         DocProcessor.process(MathUtils.class);
-       //TODO: moo: we will create the MathUtils Class later
+
     }
 }
