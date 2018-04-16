@@ -9,6 +9,8 @@ public class DocProcessor {
      * 2. displaying output for the class and for each of its non-private methods.
      * -- @param clazz Class to analyze
      * -- @return True if Doc annotation is used sufficiently on the class and its methods, false otherwise
+     *
+     * - ModifierInt is used to recognize whether a method is private or not using a decipher
      * */
 
     //we start by making the method that will examine the Class named clazz:
@@ -26,6 +28,7 @@ public class DocProcessor {
         //Examining if @Doc is appears in the Class declaration:
         //NOTE: it will be better if you set the annotation first before making this if statement:
         if (processedClass.isAnnotationPresent(Doc.class)){
+
             //we'll loop over all methods in the processedClass
             for(Method method : processedClass.getDeclaredMethods()){
 
@@ -45,6 +48,7 @@ public class DocProcessor {
 
                     //check if the @Doc is present in the method?
                     if(method.isAnnotationPresent(Doc.class)){
+
                         //if yes get the reference to the actual annotation
                         Doc doc = method.getAnnotation(Doc.class);
 

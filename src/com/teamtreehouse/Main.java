@@ -1,6 +1,7 @@
 package com.teamtreehouse;
 
 import com.teamtreehouse.docgen.DocProcessor;
+import com.teamtreehouse.math.MathUtils;
 
 public class Main {
 
